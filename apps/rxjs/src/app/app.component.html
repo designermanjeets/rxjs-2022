@@ -1,1 +1,10 @@
-<workspace-nx-welcome></workspace-nx-welcome>
+<section style='height: calc(100% - 10px);'>
+  <mat-nav-list style='float: left; width: 300px; margin-right: 15px; background: lightgray; height: calc(100%);'>
+    <mat-list-item *ngFor="let link of links" [routerLink]="link.link" routerLinkActive='active-ms'>
+      <a matLine>{{ link.text }}</a>
+    </mat-list-item>
+  </mat-nav-list>
+  <section style='padding: 20px'>
+    <router-outlet></router-outlet>
+  </section>
+</section>

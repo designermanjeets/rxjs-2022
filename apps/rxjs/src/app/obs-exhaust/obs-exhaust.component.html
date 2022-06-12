@@ -1,0 +1,37 @@
+<button *ngIf='!post' mat-raised-button color='primary' (click)='start($event)'>Start!</button>
+<section *ngIf='post'>
+  <mat-dialog-content [formGroup]='form' fxLayout='column' fxLayoutAlign='space-between'>
+    <mat-form-field appearance='outline'>
+      <input matInput placeholder='Course Description' formControlName='description'>
+    </mat-form-field>
+    <mat-form-field appearance='outline'>
+      <mat-select placeholder='Select category'formControlName='category'>
+        <mat-option value='BEGINNER'>
+          Beginner
+        </mat-option>
+        <mat-option value='INTERMEDIATE'>
+          Intermediate
+        </mat-option>
+        <mat-option value='ADVANCED'>
+          Advanced
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance='outline'>
+      <input matInput [matDatepicker]='myDatepicker' #searchInput formControlName='releasedAt'>
+      <mat-datepicker-toggle matSuffix [for]='myDatepicker'></mat-datepicker-toggle>
+      <mat-datepicker #myDatepicker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance='outline'>
+      <textarea matInput placeholder='Description' formControlName='longDescription'> </textarea>
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions fxLayout='row' fxLayoutAlign='end end' fxLayoutGap='10px'>
+    <button class='mat-raised-button' (click)='cancel()'>
+      Close
+    </button>
+    <button class='mat-raised-button mat-primary' #saveButton (click)='save($event)'>
+      Save
+    </button>
+  </mat-dialog-actions>
+</section>
