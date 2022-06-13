@@ -19,8 +19,6 @@ import { customHttpObservable } from '../_services/common.service';
 })
 export class ObsForkJoinComponent implements OnInit, AfterViewInit {
 
-  postId = 1;
-
   posts! : any;
 
   comments!: any[];
@@ -34,11 +32,12 @@ export class ObsForkJoinComponent implements OnInit, AfterViewInit {
     // Wait for Observables to complete and then combine last values they emitted;
     // complete immediately if an empty array is passed.
     // https://rxjs.dev/api/index/function/forkJoin
+    this.forkJoin();
 
   }
 
   ngAfterViewInit() {
-    this.forkJoin();
+    //
   }
 
   forkJoin() {

@@ -20,8 +20,6 @@ import { customHttpObservable } from '../_services/common.service';
 })
 export class ObsSwitchComponent implements OnInit, AfterViewInit {
 
-  postId = 1;
-
   posts$! : Observable<any>;
 
   comments$!: Observable<any[]>;

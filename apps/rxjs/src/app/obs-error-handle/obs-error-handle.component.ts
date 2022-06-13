@@ -20,8 +20,6 @@ import { debug, RxJsLoggingLevel } from '../_services/debug.service';
 })
 export class ObsErrorHandleComponent implements OnInit, AfterViewInit {
 
-  postId = 1;
-
   posts$! : Observable<any>;
 
   comments$!: Observable<any[]>;

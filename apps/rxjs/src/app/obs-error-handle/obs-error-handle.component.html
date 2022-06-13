@@ -2,21 +2,23 @@
   <input matInput placeholder="Type your search" #searchInput autocomplete="off">
 </mat-form-field>
 
-<h3>Posts</h3>
-<table id="customers" class="mat-elevation-z7" *ngIf="(posts$ | async) as posts">
+<ng-container *ngIf="(posts$ | async) as posts">
+  <h3>Posts</h3>
+  <table id="customers" class="mat-elevation-z7">
 
-  <thead>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>UserId</th>
-  </tr>
-  </thead>
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>UserId</th>
+    </tr>
+    </thead>
 
-  <tr *ngFor="let post of posts">
-    <td class="seqno-cell">{{post.title}}</td>
-    <td class="description-cell">{{post.body}}</td>
-    <td class="duration-cell">{{post.userId}}</td>
-  </tr>
+    <tr *ngFor="let post of posts">
+      <td class="seqno-cell">{{post.title}}</td>
+      <td class="description-cell">{{post.body}}</td>
+      <td class="duration-cell">{{post.userId}}</td>
+    </tr>
 
-</table>
+  </table>
+</ng-container>

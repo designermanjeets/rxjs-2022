@@ -27,13 +27,17 @@ import { ObsSwitchComponent } from './obs-switch/obs-switch.component';
 import { ObsErrorHandleComponent } from './obs-error-handle/obs-error-handle.component';
 import { ObsCustomComponent } from './obs-custom/obs-custom.component';
 import { ObsForkJoinComponent } from './obs-fork-join/obs-fork-join.component';
+import { ObsWithLatestFromComponent } from './obs-with-latest-from/obs-with-latest-from.component';
+import { ObsOperatorsComponent } from './obs-operators/obs-operators.component';
 
 const routes: Routes = [
+  { path: 'operators', component: ObsOperatorsComponent },
   { path: 'concat', component: ObsConcatinationComponent },
   { path: 'merge', component: ObsMergeCombinationComponent },
   { path: 'exhaust', component: ObsExhaustComponent },
   { path: 'switch', component: ObsSwitchComponent },
   { path: 'forkjoin', component: ObsForkJoinComponent },
+  { path: 'withlatestfrom', component: ObsWithLatestFromComponent },
   { path: 'error', component: ObsErrorHandleComponent },
   { path: 'custom', component: ObsCustomComponent },
   { path: '', redirectTo: '/concat', pathMatch: 'full' },
@@ -52,6 +56,8 @@ const routes: Routes = [
     ObsErrorHandleComponent,
     ObsCustomComponent,
     ObsForkJoinComponent,
+    ObsWithLatestFromComponent,
+    ObsOperatorsComponent,
   ],
   imports: [
     BrowserModule,

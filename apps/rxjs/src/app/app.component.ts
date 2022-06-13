@@ -15,11 +15,13 @@ export class AppComponent implements OnInit {
   todosPending$!: Observable<any>;
 
   public links = [
+    { text: 'Map/Filter/Reduce/Tap', link: 'operators' },
     { text: 'Concatenation', link: 'concat' },
     { text: 'Merge Strategy', link: 'merge' },
     { text: 'Exhaust/ExhaustAll', link: 'exhaust' },
     { text: 'Switch/Map', link: 'switch' },
     { text: 'forkJoin', link: 'forkjoin' },
+    { text: 'withLatestFrom', link: 'withlatestfrom' },
     { text: 'Error Handling', link: 'error' },
     { text: 'Custom Operator', link: 'custom' },
   ];
